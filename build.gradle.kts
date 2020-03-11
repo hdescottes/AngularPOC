@@ -10,7 +10,7 @@ import io.spring.gradle.dependencymanagement.dsl.DependencyManagementExtension
 val springBootVersion by extra { "2.1.7.RELEASE" }
 val reactorVersion by extra {"3.2.12.RELEASE"}
 val jUnitJupiterVersion by extra {"5.5.2"}
-val assertJVersion by extra {"3.8.0"}
+val assertJVersion by extra {"3.15.0"}
 
 buildscript {
     repositories {
