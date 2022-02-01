@@ -1,6 +1,6 @@
-package com.test.example.controllerTest;
+package com.angular.project.controllerTest;
 
-import com.test.example.ApplicationTest;
+import com.angular.project.ApplicationTest;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

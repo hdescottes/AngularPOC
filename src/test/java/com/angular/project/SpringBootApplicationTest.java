@@ -1,9 +1,9 @@
-package com.test.example;
+package com.angular.project;
 
 import org.junit.jupiter.api.Test;
 
 @ApplicationTest
-class SpringBootStartApplicationTest {
+class SpringBootApplicationTest {
 
     @Test
     void contextLoads() {
