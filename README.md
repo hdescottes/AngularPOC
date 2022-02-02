@@ -1,5 +1,5 @@
-# AngularApp
+# AngularAppStart
 
 ## Description
 
-An angular based app
+A template for an Angular SpringBoot application

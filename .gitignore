@@ -35,12 +35,12 @@ nbdist/
 bin/
 
 # Node
-/app-ui/node_modules
+*/node_modules
 npm-debug.log
-yarn-error.log
+yarn-error.logy
 
 # Miscellaneous
-/.angular/cache
+/app-ui/.angular
 .sass-cache/
 /connect.lock
 /coverage
