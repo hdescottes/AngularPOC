@@ -2,7 +2,7 @@
 /build/
 lib/
 !gradle/wrapper/gradle-wrapper.jar
-/src/main/resources/static/
+/app-api/src/main/resources/static/
 *.hprof
 .DS_Store
 
@@ -30,6 +30,20 @@ nbdist/
 .nb-gradle/
 
 ### VisualStudioCode ###
-.vscode/*
+/app-ui/.vscode
 .history
 bin/
+
+# Node
+/app-ui/node_modules
+npm-debug.log
+yarn-error.log
+
+# Miscellaneous
+/.angular/cache
+.sass-cache/
+/connect.lock
+/coverage
+/libpeerconnection.log
+testem.log
+/typings
