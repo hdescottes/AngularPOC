@@ -1,16 +1,20 @@
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { HelloAppComponent } from './hello-app.component';
+import { HelloService } from './service/hello-service.service';
 
 describe('HelloAppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [
-        RouterTestingModule
+        RouterTestingModule,
+        HttpClientTestingModule
       ],
       declarations: [
         HelloAppComponent
       ],
+      providers: [HelloService]
     }).compileComponents();
   });
 
@@ -20,16 +24,16 @@ describe('HelloAppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'angularclient'`, () => {
+  it(`should have as title 'Spring Boot - Angular Application'`, () => {
     const fixture = TestBed.createComponent(HelloAppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('angularclient');
+    expect(app.title).toEqual('Spring Boot - Angular Application');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(HelloAppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('Hello test CRUD with Angular');
+    expect(compiled.querySelector('div')?.textContent).toContain('Hello test CRUD with Angular');
   });
 });

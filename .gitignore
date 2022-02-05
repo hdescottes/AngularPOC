@@ -43,7 +43,7 @@ yarn-error.logy
 /app-ui/.angular
 .sass-cache/
 /connect.lock
-/coverage
+*/coverage
 /libpeerconnection.log
 testem.log
 /typings

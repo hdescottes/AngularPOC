@@ -35,3 +35,18 @@ jobs:
         run: |
           rm -f ~/.gradle/caches/modules-2/modules-2.lock
           rm -f ~/.gradle/caches/modules-2/gc.properties
+
+      - name: Use Node 16.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: '16.x'
+          cache: npm
+      - name: Install dependencies
+        run: npm install -D puppeteer karma-chrome-launcher --save-dev @babel/preset-typescript
+        working-directory: app-ui
+      - name: Build
+        run: npm run build
+        working-directory: app-ui
+      - name: Test
+        run: npm test --no-watch --no-progress --browsers=ChromeHeadlessCI
+        working-directory: app-ui

@@ -1,5 +1,5 @@
-# AngularAppStart
+# AngularPOC
 
 ## Description
 
-A template for an Angular SpringBoot application
+A simple Angular SpringBoot application
