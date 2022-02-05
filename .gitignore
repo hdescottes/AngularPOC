@@ -30,6 +30,7 @@ nbdist/
 .nb-gradle/
 
 ### VisualStudioCode ###
+.vscode
 /app-ui/.vscode
 .history
 bin/
