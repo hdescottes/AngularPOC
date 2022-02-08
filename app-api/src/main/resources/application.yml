@@ -2,7 +2,7 @@
 # Private properties - should not be changed
 ############################################
 spring:
-  application.name: AngularApp
+  application.name: AngularPOC
   jackson.mapper.sort-properties-alphabetically: true
 
 ######################################

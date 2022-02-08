@@ -9,13 +9,15 @@ import { HelloService } from './app/helloApp/service/hello-service.service';
 import { AppComponent } from './app/app.component';
 import { SideNavBarAppComponent } from './app/sideNavBar/sidenavbar-app.component';
 import { MatIconModule } from '@angular/material/icon';
+import { ButtonAppComponent } from './app/button/button-app.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeAppComponent,
     HelloAppComponent,
-    SideNavBarAppComponent
+    SideNavBarAppComponent,
+    ButtonAppComponent
   ],
   imports: [
     BrowserModule,
