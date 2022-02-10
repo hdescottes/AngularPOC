@@ -18,7 +18,7 @@ input[type="checkbox"]:focus {
     position: relative;
     margin: 0;
     border: 2px solid var(--light-gray);
-    background: linear-gradient(180deg, var(--light-gray) 0%, var(--medium-gray) 100%);
+    background-color: var(--light-gray);
     transition: all .2s ease;
 }
 
@@ -36,11 +36,12 @@ input[type="checkbox"]:focus {
 }
 
 .toggle:checked {
-    background: linear-gradient(180deg, var(--light-gray) 0%, var(--dark-gray) 100%);
+    background-color: var(--light-gray);
 }
 
 .toggle:checked:after {
-    transform: translatex(20px)
+    transform: translatex(20px);
+    background-color: var(--blue-sky);
 }
 
 .box {
