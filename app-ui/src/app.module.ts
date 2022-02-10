@@ -10,6 +10,7 @@ import { AppComponent } from './app/app.component';
 import { SideNavBarAppComponent } from './app/shared/sideNavBar/sidenavbar-app.component';
 import { MatIconModule } from '@angular/material/icon';
 import { ButtonAppComponent } from './app/shared/button/button-app.component';
+import { ToggleBtnAppComponent } from './app/shared/toggleBtn/toggle-btn-app.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ButtonAppComponent } from './app/shared/button/button-app.component';
     HomeAppComponent,
     HelloAppComponent,
     SideNavBarAppComponent,
-    ButtonAppComponent
+    ButtonAppComponent,
+    ToggleBtnAppComponent
   ],
   imports: [
     BrowserModule,
