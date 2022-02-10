@@ -7,9 +7,9 @@ import { HelloAppComponent } from './app/helloApp/hello-app.component';
 import { HomeAppComponent } from './app/homeApp/home-app.component';
 import { HelloService } from './app/helloApp/service/hello-service.service';
 import { AppComponent } from './app/app.component';
-import { SideNavBarAppComponent } from './app/sideNavBar/sidenavbar-app.component';
+import { SideNavBarAppComponent } from './app/shared/sideNavBar/sidenavbar-app.component';
 import { MatIconModule } from '@angular/material/icon';
-import { ButtonAppComponent } from './app/button/button-app.component';
+import { ButtonAppComponent } from './app/shared/button/button-app.component';
 
 @NgModule({
   declarations: [

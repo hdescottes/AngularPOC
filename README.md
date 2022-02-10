@@ -17,4 +17,5 @@ This project has no define goal, it is just to train and show some cool features
 - [x] Custom sidenav bar (youtube style)
 - [x] Custom button
 - [ ] Dark / Light theme
+- [ ] Custom 3D carousel
 
