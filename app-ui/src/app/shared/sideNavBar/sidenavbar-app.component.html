@@ -1,7 +1,8 @@
 <body>
-    <header class="header">
+    <header class="header" data-header>
         <button class="menu-icon-btn" (click)=onMenuIconClick() data-menu-icon-btn>
-            <mat-icon viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="menu-icon">menu
+            <mat-icon viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="menu-icon"
+                data-menu-icon>menu
             </mat-icon>
         </button>
     </header>
@@ -18,70 +19,70 @@
                         <a href="home" routerLink="home" class="sidebar-link">
                             <mat-icon class="sidebar-icon" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
                                 focusable="false" data-list-item-icon>home</mat-icon>
-                            <div class="hidden-sidebar">Home</div>
+                            <div class="hidden-sidebar" data-list-item-name>Home</div>
                         </a>
                     </li>
                     <li id="2" class="sidebar-list-item" (click)=onListItemClick($event) data-list-item>
                         <a href="hello" routerLink="hello" class="sidebar-link">
                             <mat-icon class="sidebar-icon" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
                                 focusable="false" data-list-item-icon>dashboard</mat-icon>
-                            <div class="hidden-sidebar">Dashboard</div>
+                            <div class="hidden-sidebar" data-list-item-name>Dashboard</div>
                         </a>
                     </li>
-                    <li class="sidebar-list-item">
+                    <li class="sidebar-list-item" data-list-item>
                         <a href="#" class="sidebar-link">
                             <mat-icon class="sidebar-icon" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
                                 focusable="false" data-list-item-icon>playlist_play</mat-icon>
-                            <div class="hidden-sidebar">Playlists</div>
+                            <div class="hidden-sidebar" data-list-item-name>Playlists</div>
                         </a>
                     </li>
-                    <li class="sidebar-list-item">
+                    <li class="sidebar-list-item" data-list-item>
                         <a href="#" class="sidebar-link">
                             <mat-icon class="sidebar-icon" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
                                 focusable="false" data-list-item-icon>insert_chart</mat-icon>
-                            <div class="hidden-sidebar">Analytics</div>
+                            <div class="hidden-sidebar" data-list-item-name>Analytics</div>
                         </a>
                     </li>
-                    <li class="sidebar-list-item">
+                    <li class="sidebar-list-item" data-list-item>
                         <a href="#" class="sidebar-link">
                             <mat-icon class="sidebar-icon" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
                                 focusable="false" data-list-item-icon>insert_comment</mat-icon>
-                            <div class="hidden-sidebar">Comments</div>
+                            <div class="hidden-sidebar" data-list-item-name>Comments</div>
                         </a>
                     </li>
-                    <li class="sidebar-list-item">
+                    <li class="sidebar-list-item" data-list-item>
                         <a href="#" class="sidebar-link">
                             <mat-icon class="sidebar-icon" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
                                 focusable="false" data-list-item-icon>subtitles</mat-icon>
-                            <div class="hidden-sidebar">Subtitles</div>
+                            <div class="hidden-sidebar" data-list-item-name>Subtitles</div>
                         </a>
                     </li>
-                    <li class="sidebar-list-item">
+                    <li class="sidebar-list-item" data-list-item>
                         <a href="#" class="sidebar-link">
                             <mat-icon class="sidebar-icon" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
                                 focusable="false" data-list-item-icon>copyrights</mat-icon>
-                            <div class="hidden-sidebar">Copyright</div>
+                            <div class="hidden-sidebar" data-list-item-name>Copyright</div>
                         </a>
                     </li>
-                    <li class="sidebar-list-item">
+                    <li class="sidebar-list-item" data-list-item>
                         <a href="#" class="sidebar-link">
                             <mat-icon class="sidebar-icon" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
                                 focusable="false" data-list-item-icon>attach_money</mat-icon>
-                            <div class="hidden-sidebar">Monetization</div>
+                            <div class="hidden-sidebar" data-list-item-name>Monetization</div>
                         </a>
                     </li>
-                    <li class="sidebar-list-item">
+                    <li class="sidebar-list-item" data-list-item>
                         <a href="#" class="sidebar-link">
                             <mat-icon class="sidebar-icon" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
                                 focusable="false" data-list-item-icon>language</mat-icon>
-                            <div class="hidden-sidebar">Language</div>
+                            <div class="hidden-sidebar" data-list-item-name>Language</div>
                         </a>
                     </li>
-                    <li class="sidebar-list-item">
+                    <li class="sidebar-list-item" data-list-item>
                         <a href="#" class="sidebar-link">
                             <mat-icon class="sidebar-icon" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
                                 focusable="false" data-list-item-icon>library_music</mat-icon>
-                            <div class="hidden-sidebar">Audio Library</div>
+                            <div class="hidden-sidebar" data-list-item-name>Audio Library</div>
                         </a>
                     </li>
                 </ul>
@@ -92,14 +93,14 @@
                         <a href="settings" routerLink="settings" class="sidebar-link">
                             <mat-icon viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false"
                                 class="sidebar-icon" data-list-item-icon>settings</mat-icon>
-                            <div class="hidden-sidebar">Settings</div>
+                            <div class="hidden-sidebar" data-list-item-name>Settings</div>
                         </a>
                     </li>
-                    <li class="sidebar-list-item">
+                    <li class="sidebar-list-item" data-list-item>
                         <a href="#" class="sidebar-link">
                             <mat-icon viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false"
                                 class="sidebar-icon" data-list-item-icon>feedback</mat-icon>
-                            <div class="hidden-sidebar">Send Feedback</div>
+                            <div class="hidden-sidebar" data-list-item-name>Send Feedback</div>
                         </a>
                     </li>
                 </ul>

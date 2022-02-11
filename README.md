@@ -16,6 +16,11 @@ This project has no define goal, it is just to train and show some cool features
 ## Content idea
 - [x] Custom sidenav bar (youtube style)
 - [x] Custom button
-- [ ] Dark / Light theme
+- [x] Dark / Light theme
 - [ ] Custom 3D carousel
+
+-------
+## Bugs
+- Toggle button's value is not persisted
+- When changing url through buttons, item selected on sidenavbar is not updated
 

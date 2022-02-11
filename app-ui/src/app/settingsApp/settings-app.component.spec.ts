@@ -30,4 +30,13 @@ describe('SettingsAppComponent', () => {
         const compiled = fixture.nativeElement as HTMLElement;
         expect(compiled.querySelector('toggle-btn-app-root')?.attributes.length).toEqual(2);
     });
+
+    it('toggleTheme', () => {
+        const fixture = TestBed.createComponent(SettingsAppComponent);
+        const app = fixture.componentInstance;
+
+        app.toggleTheme();
+
+        expect(document.body.classList).toContain("dark-theme");
+    })
 });
