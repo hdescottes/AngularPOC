@@ -30,4 +30,50 @@ describe('SideNavBarAppComponent', () => {
         const compiled = fixture.nativeElement as HTMLElement;
         expect(compiled.querySelector('div')?.textContent).toContain("My angular springboot application");
     });
+
+    it('should render home element', () => {
+        const fixture = TestBed.createComponent(SideNavBarAppComponent);
+        fixture.detectChanges();
+        const compiled = fixture.nativeElement as HTMLElement;
+        expect(compiled.querySelector('li')?.id).toEqual("1");
+        expect(compiled.querySelector('li')?.querySelector('a')?.href).toEqual("http://localhost/home");
+        expect(compiled.querySelector('li')?.querySelector('a')?.querySelector('mat-icon')?.textContent).toContain("home");
+    });
+
+    it('onMenuIconClick', () => {
+        const fixture = TestBed.createComponent(SideNavBarAppComponent);
+        const app = fixture.componentInstance;
+        const compiled = fixture.nativeElement as HTMLElement;
+
+        app.onMenuIconClick();
+
+        const sidebar = compiled.querySelector("[data-sidebar]");
+        expect(sidebar?.classList).toContain("open");
+    })
+
+    it('activeSidebar', () => {
+        const fixture = TestBed.createComponent(SideNavBarAppComponent);
+        const app = fixture.componentInstance;
+        const id = '1';
+
+        app.activeSidebar(id);
+
+        const sidebar = document.getElementById(id)
+        expect(sidebar?.classList).toContain("active");
+        expect(sidebar?.children[0].children[0].classList).toContain("active");
+        expect(sidebar?.children[0].children[1].classList).toContain("active");
+    })
+
+    it('resetActiveSidebar', () => {
+        const fixture = TestBed.createComponent(SideNavBarAppComponent);
+        const app = fixture.componentInstance;
+        const id = '1';
+        app.currentActiveId = id;
+
+        jest.spyOn(app, 'activeSidebar');
+
+        app.resetActiveSidebar(id);
+
+        expect(app.activeSidebar).toHaveBeenCalledTimes(1);
+    })
 });
