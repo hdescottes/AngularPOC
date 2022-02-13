@@ -43,8 +43,8 @@
                             <div class="hidden-sidebar" data-list-item-name>Analytics</div>
                         </a>
                     </li>
-                    <li class="sidebar-list-item" data-list-item>
-                        <a href="#" class="sidebar-link">
+                    <li id="5" class="sidebar-list-item" (click)=onListItemClick($event) data-list-item>
+                        <a href="comments" routerLink="comments" class="sidebar-link">
                             <mat-icon class="sidebar-icon" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
                                 focusable="false" data-list-item-icon>insert_comment</mat-icon>
                             <div class="hidden-sidebar" data-list-item-name>Comments</div>
