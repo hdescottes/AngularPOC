@@ -206,10 +206,21 @@ body {
 .sidebar-list-item.active::before {
     content: "";
     background-color: var(--accent-color);
+    transform-origin: 0 100%;
+    animation: selectItemAnim .5s;
     height: 100%;
     left: 0;
     width: 3px;
     position: absolute;
+}
+
+@keyframes selectItemAnim {
+    from {
+        transform: scaleY(0);
+    }
+    to {
+        transform: scaleY(1);
+    }
 }
   
 .sidebar.open {
