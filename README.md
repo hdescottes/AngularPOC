@@ -14,10 +14,9 @@ This project has no define goal, it is just to train and show some cool features
 
 -------
 ## Content idea
-- [x] Custom sidenav bar (youtube style)
-- [x] Custom button
-- [x] Dark / Light theme
 - [ ] Custom 3D carousel
+- [ ] Tower of heroes
+- [ ] Custom cards
 
 -------
 ## Bugs
