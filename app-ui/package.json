@@ -19,6 +19,9 @@
     "@angular/platform-browser": "^16.1.8",
     "@angular/platform-browser-dynamic": "^16.1.8",
     "@angular/router": "^16.1.8",
+    "@badeball/cypress-cucumber-preprocessor": "^15.1.5",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.0",
+    "cypress": "^12.17.3",
     "rxjs": "^7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "^0.13.1"
@@ -39,5 +42,12 @@
     "karma-jasmine": "^4.0.0",
     "karma-jasmine-html-reporter": "^1.7.0",
     "typescript": "^5.1.6"
+  },
+  "serve": {
+    "options": {
+      "buildTarget": "client:build",
+      "hmr": true,
+      "host": "127.0.0.1"
+    }
   }
 }
