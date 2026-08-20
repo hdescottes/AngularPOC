@@ -4,7 +4,8 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
     selector: 'sidenavbar-app-root',
     templateUrl: './sidenavbar-app.component.html',
     styleUrls: ['./sidenavbar-app.component.css'],
-    encapsulation: ViewEncapsulation.None
+    encapsulation: ViewEncapsulation.None,
+    standalone: false,
 })
 export class SideNavBarAppComponent implements OnInit {
 

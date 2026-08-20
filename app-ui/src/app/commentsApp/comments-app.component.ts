@@ -3,7 +3,8 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'comments-app-root',
   templateUrl: './comments-app.component.html',
-  styleUrls: ['./comments-app.component.css']
+  styleUrls: ['./comments-app.component.css'],
+  standalone: false,
 })
 export class CommentsAppComponent implements OnInit {
 

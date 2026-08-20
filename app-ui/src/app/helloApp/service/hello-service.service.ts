@@ -1,16 +1,16 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { environment } from '../../../environments/environment';
+import { Hello } from '../model/hello-app';
 
-@Injectable()
+@Injectable({ providedIn: 'root' })
 export class HelloService {
 
-  private url = 'http://localhost:8080/hello';
+  private readonly http = inject(HttpClient);
+  private readonly url = `${environment.apiUrl}/hello`;
 
-  constructor(private http: HttpClient) {
-  }
-
-  getHello(): Observable<any> {
-    return this.http.get(`${this.url}`);
+  getHello(): Observable<Hello> {
+    return this.http.get<Hello>(this.url);
   }
 }

@@ -8,9 +8,7 @@ describe('ToggleBtnAppComponent', () => {
         await TestBed.configureTestingModule({
             imports: [
                 RouterTestingModule,
-                HttpClientTestingModule
-            ],
-            declarations: [
+                HttpClientTestingModule,
                 ToggleBtnAppComponent
             ]
         }).compileComponents();

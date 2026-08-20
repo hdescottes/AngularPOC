@@ -9,11 +9,11 @@ describe('SettingsAppComponent', () => {
         await TestBed.configureTestingModule({
             imports: [
                 RouterTestingModule,
-                HttpClientTestingModule
+                HttpClientTestingModule,
+                ToggleBtnAppComponent
             ],
             declarations: [
-                SettingsAppComponent,
-                ToggleBtnAppComponent
+                SettingsAppComponent
             ]
         }).compileComponents();
     });
@@ -28,7 +28,7 @@ describe('SettingsAppComponent', () => {
         const fixture = TestBed.createComponent(SettingsAppComponent);
         fixture.detectChanges();
         const compiled = fixture.nativeElement as HTMLElement;
-        expect(compiled.querySelector('toggle-btn-app-root')?.attributes.length).toEqual(2);
+        expect(compiled.querySelector('toggle-btn-app-root')?.attributes.length).toEqual(1);
     });
 
     it('toggleTheme', () => {
