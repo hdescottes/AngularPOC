@@ -3,7 +3,8 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'settings-app-root',
   templateUrl: './settings-app.component.html',
-  styleUrls: ['./settings-app.component.css']
+  styleUrls: ['./settings-app.component.css'],
+  standalone: false,
 })
 export class SettingsAppComponent implements OnInit {
 

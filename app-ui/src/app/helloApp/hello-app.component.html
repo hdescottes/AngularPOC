@@ -3,13 +3,24 @@
 </div>
 
 <div align='center'>
-  <p *ngIf="hello != null">
-    {{ hello.title }}
-  </p>
+  @if (loading) {
+    <p>Chargement...</p>
+  } @else if (errorMessage) {
+    <p>{{ errorMessage }}</p>
+    <button type="button" (click)="getHello()">Réessayer</button>
+  } @else if (hello?.title) {
+    <p>
+      {{ hello.title }}
+    </p>
+  } @else {
+    <p>
+      No data found
+    </p>
+  }
 </div>
 
 <div align='center'>
   <button-app-root [routerLink]="['/']" title="Back"></button-app-root>
 </div>
 
-<router-outlet></router-outlet>
+<router-outlet />

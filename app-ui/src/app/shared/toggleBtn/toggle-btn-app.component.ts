@@ -1,14 +1,14 @@
-import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, input, OnInit, ViewEncapsulation } from '@angular/core';
 
 @Component({
     selector: 'toggle-btn-app-root',
     templateUrl: './toggle-btn-app.component.html',
     styleUrls: ['./toggle-btn-app.component.css'],
-    encapsulation: ViewEncapsulation.None
+    encapsulation: ViewEncapsulation.None,
 })
 export class ToggleBtnAppComponent implements OnInit {
 
-    @Input() title: any;
+    readonly title: any = input<string>();
 
     constructor() {
     }

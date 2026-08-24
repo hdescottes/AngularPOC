@@ -5,7 +5,6 @@ import { HttpClientModule } from "@angular/common/http";
 import { AppRoutingModule } from './app-routing.module';
 import { HelloAppComponent } from './app/helloApp/hello-app.component';
 import { HomeAppComponent } from './app/homeApp/home-app.component';
-import { HelloService } from './app/helloApp/service/hello-service.service';
 import { AppComponent } from './app/app.component';
 import { SideNavBarAppComponent } from './app/shared/sideNavBar/sidenavbar-app.component';
 import { MatIconModule } from '@angular/material/icon';
@@ -21,17 +20,16 @@ import { CommentsAppComponent } from './app/commentsApp/comments-app.component';
     HelloAppComponent,
     CommentsAppComponent,
     SettingsAppComponent,
-    SideNavBarAppComponent,
-    ButtonAppComponent,
-    ToggleBtnAppComponent
+    SideNavBarAppComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    MatIconModule
+    MatIconModule,
+    ButtonAppComponent,
+    ToggleBtnAppComponent
   ],
-  providers: [HelloService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

@@ -5,6 +5,21 @@ spring:
   application.name: AngularPOC
   jackson.mapper.sort-properties-alphabetically: true
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "health,refresh"
+  health:
+    readiness-state:
+      enabled: true
+    liveliness-state:
+      enabled: true
+  endpoint:
+    health:
+      probes:
+        enabled: true
+
 ######################################
 # Public properties - must be modified
 ######################################

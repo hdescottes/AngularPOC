@@ -1,14 +1,14 @@
-import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, input, OnInit, ViewEncapsulation } from '@angular/core';
 
 @Component({
     selector: 'button-app-root',
     templateUrl: './button-app.component.html',
     styleUrls: ['./button-app.component.css'],
-    encapsulation: ViewEncapsulation.None
+    encapsulation: ViewEncapsulation.None,
 })
 export class ButtonAppComponent implements OnInit {
 
-    @Input() title: any;
+    readonly title: any = input<string>();
 
     constructor() {
     }
