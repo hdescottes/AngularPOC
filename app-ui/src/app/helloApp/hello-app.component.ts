@@ -1,7 +1,5 @@
-import { ChangeDetectorRef, Component, inject, OnInit } from '@angular/core';
-import { HttpErrorResponse } from '@angular/common/http';
-import { finalize } from 'rxjs';
-import { Hello } from './model/hello-app';
+import { Component, computed, inject } from '@angular/core';
+import { rxResource } from '@angular/core/rxjs-interop';
 import { HelloService } from './service/hello-service.service';
 
 @Component({
@@ -10,43 +8,21 @@ import { HelloService } from './service/hello-service.service';
   styleUrls: ['./hello-app.component.css'],
   standalone: false,
 })
-export class HelloAppComponent implements OnInit {
-
-  public static URL = '/hello';
+export class HelloAppComponent {
 
   readonly title = 'Spring Boot - Angular Application';
   private readonly helloService = inject(HelloService);
-  private readonly changeDetectorRef = inject(ChangeDetectorRef);
 
-  hello: Hello | null = null;
-  loading = false;
-  errorMessage: string | null = null;
+  readonly helloResource = rxResource({
+    stream: () => this.helloService.getHello()
+  });
 
-  ngOnInit(): void {
-    this.getHello();
-  }
+  readonly errorMessage = computed(() => {
+    const error = this.helloResource.error();
+    return error instanceof Error ? error.message : null;
+  });
 
-  getHello(): void {
-    this.loading = true;
-    this.errorMessage = null;
-
-    this.helloService.getHello()
-      .pipe(
-        finalize(() => {
-          this.loading = false;
-          this.changeDetectorRef.detectChanges();
-        })
-      )
-      .subscribe({
-        next: (data) => {
-          this.hello = data;
-        },
-        error: (error: HttpErrorResponse) => {
-          this.hello = null;
-          this.errorMessage = error.status === 0
-            ? 'Le serveur est indisponible.'
-            : 'Impossible de charger le message.';
-        }
-      });
+  retry(): void {
+    this.helloResource.reload();
   }
 }

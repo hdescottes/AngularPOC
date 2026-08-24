@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from "@angular/common/http";
 
 import { AppRoutingModule } from './app-routing.module';
 import { HelloAppComponent } from './app/helloApp/hello-app.component';
@@ -25,7 +24,6 @@ import { CommentsAppComponent } from './app/commentsApp/comments-app.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule,
     MatIconModule,
     ButtonAppComponent,
     ToggleBtnAppComponent

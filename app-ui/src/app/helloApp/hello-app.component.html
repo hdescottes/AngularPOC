@@ -3,14 +3,14 @@
 </div>
 
 <div align='center'>
-  @if (loading) {
+  @if (helloResource.isLoading()) {
     <p>Chargement...</p>
-  } @else if (errorMessage) {
-    <p>{{ errorMessage }}</p>
-    <button type="button" (click)="getHello()">Réessayer</button>
-  } @else if (hello?.title) {
+  } @else if (errorMessage(); as message) {
+    <p>{{ message }}</p>
+    <button type="button" (click)="retry()">Réessayer</button>
+  } @else if (helloResource.value()?.title; as title) {
     <p>
-      {{ hello.title }}
+      {{ title }}
     </p>
   } @else {
     <p>

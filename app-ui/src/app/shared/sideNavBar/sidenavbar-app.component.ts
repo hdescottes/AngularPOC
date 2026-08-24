@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
     selector: 'sidenavbar-app-root',
@@ -7,15 +7,9 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
     encapsulation: ViewEncapsulation.None,
     standalone: false,
 })
-export class SideNavBarAppComponent implements OnInit {
+export class SideNavBarAppComponent {
 
     currentActiveId: string
-
-    constructor() {
-    }
-
-    ngOnInit(): void {
-    }
 
     onMenuIconClick() {
         const sidebar = document.querySelector("[data-sidebar]")

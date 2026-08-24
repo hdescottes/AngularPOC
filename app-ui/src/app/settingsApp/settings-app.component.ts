@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'settings-app-root',
@@ -6,13 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./settings-app.component.css'],
   standalone: false,
 })
-export class SettingsAppComponent implements OnInit {
-
-  constructor() {
-  }
-
-  ngOnInit(): void {
-  }
+export class SettingsAppComponent {
 
   toggleTheme() {
     document.body.classList.toggle("dark-theme");

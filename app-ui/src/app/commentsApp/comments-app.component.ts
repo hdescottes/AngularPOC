@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'comments-app-root',
@@ -6,12 +6,5 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./comments-app.component.css'],
   standalone: false,
 })
-export class CommentsAppComponent implements OnInit {
-
-  constructor() {
-  }
-
-  ngOnInit(): void {
-  }
-
+export class CommentsAppComponent {
 }
