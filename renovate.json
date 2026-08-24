@@ -4,6 +4,8 @@
     "config:recommended"
   ],
   "automergeType": "pr",
+  "automerge": true,
   "prCreation": "immediate",
   "rebaseWhen": "conflicted",
+  "prHourlyLimit": 20
 }
